@@ -1,6 +1,3 @@
-from array import array
-from distutils.command.upload import upload
-import json
 from django.db import models
 
 class Housing (models.Model):
