@@ -10,6 +10,16 @@
     align-items: center;
     justify-content: space-between;
     position: sticky;
+    height: 80px;
+    padding-inline: 120px;
+}
+
+.topBar > button > img {
     height: 100px;
-    padding-inline: 20px;
+    width: 100px;
+    border: 0px;
+}
+
+.topBar > button {
+    border: 0px;
 }

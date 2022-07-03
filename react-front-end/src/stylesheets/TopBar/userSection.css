@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.userSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.userSection > button {
+    margin-inline: 8px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.userSection > button:last-child {
+    border: 1px solid black ;
+}
+
+.userSection > button > img {
+    height: 15px;
+    width: 15px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.userMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65px;
+    height: 35px;
+    border: 1px solid #606060;
+    border-radius: 60px;
+    padding-inline: 4px;
+    cursor: pointer;
+}
+
+.userMenu > img {
+    height: 28px;
+    width: 28px;
+}
+
+.userMenu > img:first-child {
+    height: 15px;
+    width: 15px;
+}
