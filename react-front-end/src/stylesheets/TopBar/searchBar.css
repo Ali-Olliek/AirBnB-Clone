@@ -30,7 +30,7 @@
 
 .searchBar {
     display: flex;
-    border: 1px solid grey;
+    border: 1px solid #cfcfcf;
     padding: 20px 10px;
     border-radius: 35px;
     align-items: center;
@@ -38,10 +38,10 @@
 }
 
 .searchBar > *:not(button) {
-    border-right: 1px solid grey;
+    border-right: 1px solid #cfcfcf;
     padding-inline: 10px;
     font-family: RobotoM;
-    font-size: 14px;
+    font-size: 13px;
     cursor: pointer;
 }
 
@@ -55,7 +55,7 @@
     border: 0px;
 }
 
-.searchBar > button > svg {
+.searchBar > button > img {
     width: 16px;
     height: 16px;
     position: relative;
@@ -65,5 +65,6 @@
 }
 
 .searchBar> *:nth-child(3) {
-    color: #717171;
+    color: #a7a7a7;
+    font-family: RobotoL;
 }
