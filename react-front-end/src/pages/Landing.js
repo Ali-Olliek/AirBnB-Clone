@@ -7,8 +7,8 @@ export default function Landing() {
   return (
     <>
       <TopBar />
-      <FiltersBar />
-      <Container />
+      {/* <FiltersBar />
+      <Container /> */}
     </>
   );
 }
