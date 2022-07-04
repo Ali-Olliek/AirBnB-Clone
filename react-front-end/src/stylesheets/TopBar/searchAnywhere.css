@@ -1,0 +1,25 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.regions {
+    width: 400px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.regions-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    height: auto;
+    row-gap: 20px;
+}
+.regions-container > button > img {
+    width: 80px;
+    height: 80px;
+}
