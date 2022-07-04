@@ -14,7 +14,7 @@ export default function SearchAnywhere() {
   return (
     <>
       <div className="regions">
-        <h4>Search by region</h4>
+        <h2>Search by region</h2>
         <div className="regions-container">
           {regions.map((region) => (
             <button>
