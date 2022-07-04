@@ -5,6 +5,7 @@ import "../../../stylesheets/TopBar/topBar.css";
 import logo from '../../../assets/svgs/logo.svg'
 
 export default function TopBar() {
+
   return (
     <div className='topBar'>
       <img src={logo} alt=''/>
