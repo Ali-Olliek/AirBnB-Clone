@@ -35,6 +35,8 @@
     border-radius: 35px;
     align-items: center;
     height: 48px;
+    position: relative;
+    left: 120px;
 }
 
 .searchBar > button {
@@ -46,7 +48,7 @@
     cursor: pointer;
 }
 
-.searchBar > button:last-child {
+.searchBar > button:nth-child(4) {
     border-radius: 50%;
     width: 32px;
     height: 32px;

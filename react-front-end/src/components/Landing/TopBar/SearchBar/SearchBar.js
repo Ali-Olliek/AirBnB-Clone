@@ -1,9 +1,13 @@
 import React, {useState, useRef, useEffect} from 'react'
-import SearchAnytime from './SearchAnytime'
-import SearchAnywhere from './SearchAnywhere'
-import AddGuests from './AddGuests'
+import AdvancedSearchBar from './AdvancedSearchBar'
 import '../../../../stylesheets/TopBar/searchBar.css'
 import search from '../../../../assets/svgs/search.svg'
+
+
+// Search Bar:
+// OnClick, Disappears
+// OnClick, AdvancedSearchBar Element Appears
+// Upon Clicking Outside of (useRef), state changes to false.
 
 export default function SearchBar() {
   const [displaySearchBar, setDisplaySearchBar] = useState(false)
@@ -11,18 +15,16 @@ export default function SearchBar() {
   // This function will close the search window when clicked outside
   function useOutsideAlerter(ref) {
     useEffect(() => {
-      /**
-       * Alert if clicked on outside of element
-       */
+      // checking if click happened outside of ref
       function handleClickOutside(event) {
         if (ref.current && !ref.current.contains(event.target)) {
           setDisplaySearchBar(false)
         }
       }
-      // Bind the event listener
+      // Adding EventListener
       document.addEventListener("mousedown", handleClickOutside);
+      // Removing Event Listener
       return () => {
-        // Unbind the event listener on clean up
         document.removeEventListener("mousedown", handleClickOutside);
       };
     }, [ref]);
@@ -34,20 +36,24 @@ export default function SearchBar() {
 
   return (
     <>
-      <div style={displaySearchBar ? {display:"block"} : null } ref={wrapperRef} className="searchBar">
-        <button onClick={(e) => setDisplaySearchBar(true)} >Anywhere</button>
+      <div
+        style={displaySearchBar ? { display: "none" } : null}
+        ref={wrapperRef}
+        className="searchBar"
+      >
+        <button onClick={(e) => setDisplaySearchBar(true)}>Anywhere</button>
         <button onClick={(e) => setDisplaySearchBar(true)}>Any week</button>
         <button onClick={(e) => setDisplaySearchBar(true)}>Add Guests</button>
         <button>
-          <img src={search} alt=''/>
+          <img src={search} alt="" />
         </button>
-        {displaySearchBar ? (
-          <>
-            <SearchAnywhere displayed={displaySearchBar} />
-            <SearchAnytime displayed={displaySearchBar} />
-            <AddGuests displayed={displaySearchBar} />
-          </>
-        ) : null}
+      </div>
+      <div ref={wrapperRef}>
+        {displaySearchBar ? 
+        <>
+          <AdvancedSearchBar displayed={displaySearchBar} />
+        </> 
+        : null }
       </div>
     </>
   );
