@@ -4,7 +4,7 @@ import '../../../../stylesheets/TopBar/searchAnywhere.css'
 export default function SearchAnywhere() {
   const regions = [
     ["I'm flexible",World],
-    ["ME", ME],
+    ["Middle East", ME],
     ["Italy", Italy],
     ["United States", USA],
     ["France", France],
